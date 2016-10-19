@@ -14,6 +14,7 @@ program.option('-h, --hostname [value]', 'Set the host name or ip for the server
   .option('-e, --errorDocument [path]', 'Custom Error Document for Static Web Hosting', '')
   .option('-d, --directory [path]', 'Data directory')
   .option('-c, --cors', 'Enable CORS', false)
+  .option('--selfSignedCert', 'Run with TLS, using a self-signed certificate', false)
   .parse(process.argv);
 
 if (program.directory === undefined) {
